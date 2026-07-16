@@ -1,5 +1,4 @@
 ﻿node_modules/
-netlify.toml
 .env
 *.log
 .DS_Store
