@@ -1,11 +1,11 @@
-﻿// ============================================
-// 鼠标花瓣粒子效果（性能优化版：CSS 动画替代 rAF）
+// ============================================
+// 鼠标跟踪花瓣粒子效果（性能优化版：CSS 动画替代 rAF）
 // ============================================
 
-(function () {
+(function() {
   'use strict';
 
-  var IMAGES = ['media/piaofu/1.webp', 'media/piaofu/2.webp', 'media/piaofu/3.webp', 'media/piaofu/4.webp', 'media/piaofu/5.webp'];
+  var IMAGES = ['media/piaofu/1.webp','media/piaofu/2.webp','media/piaofu/3.webp','media/piaofu/4.webp','media/piaofu/5.webp'];
   var MIN_SIZE = 3;
   var MAX_SIZE = 7;
   var PARTICLES_PER_SPAWN = 3;
@@ -21,9 +21,9 @@
 
   function preload() {
     var loaded = 0;
-    IMAGES.forEach(function (src) {
+    IMAGES.forEach(function(src) {
       var img = new Image();
-      img.onload = img.onerror = function () {
+      img.onload = img.onerror = function() {
         images.push(img);
         loaded++;
         if (loaded === IMAGES.length) start();
@@ -44,7 +44,7 @@
     if (images.length === 0 || particles.length >= MAX_PARTICLES) return;
 
     // 清理过期粒子（仅在 spawn 时做一次，减少 rAF 负担）
-    particles = particles.filter(function (p) {
+    particles = particles.filter(function(p) {
       if (Date.now() - p.birth > MAX_LIFETIME) {
         if (p.el.parentNode) p.el.parentNode.removeChild(p.el);
         return false;
@@ -91,7 +91,7 @@
   function start() {
     createContainer();
 
-    document.addEventListener('mousemove', function (e) {
+    document.addEventListener('mousemove', function(e) {
       var now = Date.now();
       if (now - lastSpawnTime < 80) return;
       lastSpawnTime = now;
@@ -123,5 +123,5 @@
   }
 
   preload();
-})();
-
+})();
+

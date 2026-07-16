@@ -1,4 +1,4 @@
-﻿/* ============================================
+/* ============================================
    飘落花瓣特效 - 独立样式模块
    安全层级: z-index 50000
    不修改任何原有 HTML/CSS/JS
@@ -109,4 +109,4 @@
 
 @media (prefers-reduced-motion: reduce) {
   .petal { animation-duration: 30s !important; }
-}
+}
