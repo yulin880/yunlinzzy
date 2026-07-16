@@ -1,0 +1,112 @@
+﻿/* ============================================
+   飘落花瓣特效 - 独立样式模块
+   安全层级: z-index 50000
+   不修改任何原有 HTML/CSS/JS
+   ============================================ */
+
+/* ============================================
+   花瓣亮色荧光描边美化
+   保留 drop-shadow 沿图片边缘发光效果
+   削减层数和模糊半径，降低 GPU 负担
+   ============================================ */
+
+/* 基础荧光层：绿色主光 */
+.petal {
+  filter:
+    drop-shadow(0 0 4px rgba(83, 179, 77, 0.6))
+    drop-shadow(0 0 12px rgba(192, 235, 215, 0.3))
+    drop-shadow(0 1px 3px rgba(0, 0, 0, 0.15));
+  animation: petalGlow 2.5s ease-in-out infinite;
+}
+
+/* 呼吸脉动：光晕大小周期性变化 */
+@keyframes petalGlow {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 4px rgba(83, 179, 77, 0.6))
+      drop-shadow(0 0 12px rgba(192, 235, 215, 0.3))
+      drop-shadow(0 1px 3px rgba(0, 0, 0, 0.15));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 6px rgba(83, 179, 77, 0.8))
+      drop-shadow(0 0 18px rgba(192, 235, 215, 0.5))
+      drop-shadow(0 1px 3px rgba(0, 0, 0, 0.15));
+  }
+}
+
+/* 悬停增强：青色+橙色双色荧光 */
+.petal:hover {
+  filter:
+    drop-shadow(0 0 6px rgba(83, 179, 77, 0.9))
+    drop-shadow(0 0 16px rgba(249, 141, 116, 0.4))
+    drop-shadow(0 0 30px rgba(192, 235, 215, 0.2))
+    drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2)) !important;
+  transform: scale(1.15) translateZ(0);
+  animation: petalGlowHover 1.5s ease-in-out infinite;
+}
+
+@keyframes petalGlowHover {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 6px rgba(83, 179, 77, 0.9))
+      drop-shadow(0 0 16px rgba(249, 141, 116, 0.4))
+      drop-shadow(0 0 30px rgba(192, 235, 215, 0.2))
+      drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 8px rgba(83, 179, 77, 1))
+      drop-shadow(0 0 24px rgba(249, 141, 116, 0.6))
+      drop-shadow(0 0 40px rgba(192, 235, 215, 0.3))
+      drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+  }
+}
+
+#petal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50000;
+  overflow: visible;
+}
+
+.petal {
+  position: absolute;
+  top: -80px;
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  transition: opacity 0.3s ease;
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--drift, 0), 105vh) rotate(360deg) scale(1);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .petal:nth-child(n+6) { display: none; }
+}
+
+@media (max-width: 480px) {
+  .petal:nth-child(n+4) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal { animation-duration: 30s !important; }
+}

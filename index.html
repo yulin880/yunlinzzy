@@ -1,0 +1,792 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yulinzzy</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/petals.css">
+</head>
+
+<body>
+  <!-- 悬浮开屏页 -->
+  <div class="splash-overlay" id="splashOverlay">
+    <div class="splash-container">
+      <img src="media/图片/splash-iris.webp" alt="鸢尾花开" class="splash-iris">
+      <div class="splash-text">一川鸢尾 · 予你真光</div>
+    </div>
+    <button class="splash-dismiss" id="splashDismiss" aria-label="进入主页">&#10005;</button>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#top" class="nav-logo">张真源<span>💚</span>真知棒</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#top">首页</a></li>
+        <li><a href="#profile">知·源</a></li>
+        <li><a href="#music">音源收录</a></li>
+        <li><a href="#stage">舞台星光</a></li>
+        <li><a href="#drama">戏剧演绎</a></li>
+        <li><a href="#variety">综艺闪光</a></li>
+        <li><a href="#fans">真知小筑</a></li>
+        <li><a href="#messageWall">真知留言</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="切换导航菜单"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <section class="hero" id="top">
+    <div class="carousel" id="carousel">
+      <div class="carousel-slide active"><img src="media/图片/轮播图/微信图片_20260706113550_9_12.jpg" alt="轮播图1"></div>
+      <div class="carousel-slide"><img src="media/图片/轮播图/微信图片_20260706113551_10_12.jpg" alt="轮播图2"></div>
+      <div class="carousel-slide"><img src="media/图片/轮播图/微信图片_20260706113553_11_12.jpg" alt="轮播图3"></div>
+      <div class="carousel-slide"><img src="media/图片/轮播图/微信图片_20260706113553_12_12.jpg" alt="轮播图4"></div>
+      <div class="carousel-slide"><img src="media/图片/轮播图/微信图片_20260706113554_13_12.jpg" alt="轮播图5"></div>
+      <div class="carousel-slide"><img src="media/图片/轮播图/微信图片_20260706113555_14_12.jpg" alt="轮播图6"></div>
+      <div class="carousel-slide"><img src="media/图片/轮播图/微信图片_20260706113556_15_12.jpg" alt="轮播图7"></div>
+    </div>
+    <div class="carousel-overlay"></div>
+    <div class="hero-title">
+      <h1>一川鸢尾 · 予你真光</h1>
+
+    </div>
+    <div class="carousel-indicators" id="carouselIndicators">
+      <button class=" active" data-index="0"></button>
+      <button class="" data-index="1"></button>
+      <button class="" data-index="2"></button>
+      <button class="" data-index="3"></button>
+      <button class="" data-index="4"></button>
+      <button class="" data-index="5"></button>
+      <button class="" data-index="6"></button>
+    </div>
+  </section>
+
+  <div class="social-links" id="socialLinks">
+    <a href="https://www.weibo.com/u/5908064369" target="_blank" rel="noopener" class="social-btn weibo">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path
+          d="M10.1 18.3c-3.5.4-6.6-1.2-6.8-3.6-.3-2.4 2.4-4.7 5.9-5.1 3.5-.4 6.6 1.2 6.8 3.6.3 2.4-2.4 4.7-5.9 5.1zm6.9-9.1c-.3-.9-1.2-1.4-2.1-1.1l-.1-.1c.6-.3.8-1 .5-1.6-.4-.7-1.3-.9-2-.5-.1-.9-.9-1.6-1.8-1.6-.4 0-.7.1-1 .3-.9-.6-2.1-.3-2.7.7-.6.9-.3 2.1.7 2.7-.2.1-.4.2-.6.4-1 .8-1.1 2.2-.3 3.2.8 1 2.2 1.1 3.2.3.2-.2.4-.3.6-.4.6.9 1.8 1.1 2.7.4.9-.6 1.1-1.8.4-2.7l.1-.1c.6.1 1.3-.2 1.5-.9zM12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" />
+      </svg>
+      <span>微博</span>
+    </a>
+    <a href="https://y.qq.com/n/ryqq_v2/singer/000c1x452OEKGL" target="_blank" rel="noopener"
+      class="social-btn qqmusic">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M12 3v10.5c-.5-.3-1.1-.5-1.7-.5-1.9 0-3.5 1.5-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.5 3.5-3.5V8h3.5V3H12z" />
+      </svg>
+      <span>QQ音乐</span>
+    </a>
+    <a href="https://www.douyin.com/user/MS4wLjABAAAAOpX2NjhZ8eTZFkP6BeKiWOxQXo264vHMFU8Zngk6Nrh61qKZjDjJO5ZvnyoZKN_E"
+      target="_blank" rel="noopener" class="social-btn douyin">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path
+          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM8.5 14c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5zm7-2h-2V9.5c0-.3-.2-.5-.5-.5s-.5.2-.5.5V12h-2v2h2v3.5c0 .3.2.5.5.5s.5-.2.5-.5V14h2v-2z" />
+      </svg>
+      <span>抖音</span>
+    </a>
+  </div>
+
+  <section class="section about-zhang fade-in" id="profile">
+    <div class="about-header">
+      <h2>知·源</h2>
+      <p class="about-tagline">存档独一份的温柔</p>
+    </div>
+
+    <div class="about-subsection">
+      <div class="subsection-header">
+
+      </div>
+      <div class="profile-main">
+        <div class="profile-portrait-card">
+          <div class="portrait-frame">
+            <img src="media/图片/profile/image1.webp" alt="张真源" class="profile-portrait">
+            <div class="portrait-ring"></div>
+          </div>
+          <div class="profile-name">张真源</div>
+          <div class="profile-subtitle">青年演员 | 歌手</div>
+          <div class="profile-tags">
+            <span class="tag">高光缔造者</span>
+            <span class="tag">二代唯一all绿</span>
+            <span class="tag">养成系天花板</span>
+            <span class="tag">人间小爱神</span>
+            <span class="tag">顶级浓颜ACE</span>
+            <span class="tag">戏唱舞三刀流</span>
+            <span class="tag">舞台王者</span>
+            <span class="tag">全能唱作人</span>
+
+          </div>
+        </div>
+        <div class="profile-right">
+          <div class="profile-info-card">
+            <div class="card-icon">&#x1F4CB;</div>
+            <h3>小张档案</h3>
+            <div class="profile-detail"><span class="label">姓名</span><span class="value">张真源</span></div>
+            <div class="profile-detail"><span class="label">生日</span><span class="value">2003年4月16日</span></div>
+            <div class="profile-detail"><span class="label">籍贯</span><span class="value">重庆</span></div>
+            <div class="profile-detail"><span class="label">星座</span><span class="value">白羊座 &#x2648;</span></div>
+            <div class="profile-detail"><span class="label">身高</span><span class="value">183cm</span></div>
+            <div class="profile-detail"><span class="label">专辑</span><span class="value">《镜花水月 Cold Romance》</span>
+            </div>
+            <div class="profile-detail"><span class="label">单曲</span><span class="value">相思锁、Someone Like
+                You、蝴蝶、心桥、光影</span></div>
+            <div class="profile-detail media-note"><span class="value">多次登上人民文娱、环球人物等主流媒体专访，以温柔自律、稳定实力收获路人好感。</span>
+            </div>
+          </div>
+          <div class="profile-culture-card">
+            <div class="card-icon">&#x1F49A;</div>
+            <h3>专属应援</h3>
+            <div class="culture-item">
+              <h4><span class="culture-icon">&#x1F49A;</span> 粉丝名 | 真知棒</h4>
+              <p>寓意真正知晓张真源有多棒；同名糖果寓意双向奔赴的甜蜜陪伴。</p>
+            </div>
+            <div class="culture-item">
+              <h4><span class="culture-icon">&#x1F338;</span> 应援花 | 鸢尾花</h4>
+              <p>代表长久惦念，柔软外表下藏着坚韧的力量。</p>
+            </div>
+            <div class="culture-item culture-color">
+              <h4><span class="culture-icon">&#x1F3A8;</span> 应援色 | 水玉暖炽</h4>
+              <div class="color-swatches">
+                <span class="swatch" style="background:#c0ebd7;" title="水玉 #c0ebd7"></span>
+                <span class="swatch" style="background:#f98d74;" title="暖炽 #f98d74"></span>
+              </div>
+              <p>以绿色为主调，清透水玉内敛安静，暖炽明亮热忱坦荡。</p>
+            </div>
+            <div class="culture-item">
+              <h4><span class="culture-icon">&#x1F4E2;</span> 经典应援口号</h4>
+              <ul class="slogan-list">
+                <li>温文尔雅如清泉，举世无双张真源</li>
+                <li>胸肌腹肌大腿肌，真源走进我心里</li>
+                <li>宽肩窄腰大长腿，爱上真源不后悔</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-subsection">
+      <div class="subsection-header">
+        <h3>萌宠·呼安专属馆</h3>
+        <div class="subsection-line"></div>
+      </div>
+      <div class="pet-hero-card">
+        <div class="pet-hero-image">
+          <img src="media/图片/support/image2.webp" alt="呼安">
+          <div class="pet-avatar-badge">
+            <span class="pet-avatar-emoji">&#x1F415;</span>
+          </div>
+        </div>
+        <div class="pet-hero-content">
+          <h3 class="pet-hero-title">呼安大王 <span class="pet-names">/ 欢欢 / Nono</span></h3>
+          <div class="pet-stats">
+            <div class="pet-stat-item">
+              <span class="stat-value">黄柴犬</span>
+              <span class="stat-label">品种</span>
+            </div>
+            <div class="pet-stat-item">
+              <span class="stat-value">2023.04.08</span>
+              <span class="stat-label">到家日期</span>
+            </div>
+            <div class="pet-stat-item">
+              <span class="stat-value">呼呼大睡 · 平平安安</span>
+              <span class="stat-label">名字寓意</span>
+            </div>
+            <div class="pet-stat-item">
+              <span class="stat-value">精力充沛 · 叛逆小狗</span>
+              <span class="stat-label">性格印象</span>
+            </div>
+          </div>
+          <div class="pet-divider"></div>
+          <p class="pet-desc">呼安连读谐音"欢"，祝愿它永远活泼快乐。黄油面包出镜记录丰富，是小张盲盒常驻嘉宾、生日直播、线下片场随拍常客。</p>
+          <a href="https://www.bilibili.com/video/BV1kP411k7rp?bvid=BV1kP411k7rp&" target="_blank" rel="noopener"
+            class="pet-btn">
+            <span class="pet-btn-icon">&#x1F4AC;</span>
+            呼安大王随录
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-subsection">
+      <div class="subsection-header">
+        <h3>宠粉时刻</h3>
+        <div class="subsection-line"></div>
+      </div>
+      <div class="chasing-pa-layout">
+        <div class="chasing-pa-left polaroid">
+          <a href="https://www.bilibili.com/video/BV1oi4y1t72C/?bvid=BV1oi4y1t72C&" target="_blank" rel="noopener"
+            class="pa-card polaroid pa-card-left chasing-landscape">
+            <img class="card-img" src="media/图片/chasing/image3.webp" alt="清唱时刻">
+            <div class="pa-card-label">清唱时刻</div>
+          </a>
+        </div>
+        <div class="chasing-pa-right polaroid">
+          <a href="https://www.bilibili.com/video/BV1wZ4y1i7MW?bvid=BV18PTK6nEpZ&" target="_blank" rel="noopener"
+            class="pa-card polaroid pa-card-right chasing-landscape">
+            <img class="card-img" src="media/图片/chasing/image4.webp" alt="小张盲盒">
+            <div class="pa-card-label">小张盲盒</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section fade-in" id="music">
+    <div class="section-header">
+      <h2>音源收录</h2>
+      <p>用歌声诉说故事</p>
+    </div>
+    <div class="music-tabs">
+      <button class="music-tab active" data-tab="original">原创 / 个人单曲</button>
+      <button class="music-tab" data-tab="live">现场 Live 翻唱</button>
+    </div>
+    <div class="music-content" id="tab-original">
+      <div class="music-circle-grid" id="originalGrid">
+        <p class="loading-text">加载中...</p>
+      </div>
+    </div>
+    <div class="music-content" id="tab-live" style="display:none;">
+      <div class="music-circle-grid" id="liveGrid">
+        <p class="loading-text">加载中...</p>
+      </div>
+    </div>
+  </section> <!-- 音乐播放器 -->
+
+  <!-- 隐藏音频元素 -->
+  <audio id="audioElement" preload="metadata"></audio>
+  </section>
+
+  <section class="section fade-in" id="stage">
+    <div class="section-header">
+      <h2>舞台星光</h2>
+      <p>追光而行，舞台为王</p>
+    </div>
+    <div class="stage-category">
+      <h3>独演独唱</h3>
+      <div class="card-grid">
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1U3Ga6MEpx" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/solo/image22.webp" alt="在加纳共和国离婚">
+          <div class="card-body">
+            <div class="card-title">在加纳共和国离婚</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1kc411T7G1" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/solo/image23.webp" alt="爱的消亡史">
+          <div class="card-body">
+            <div class="card-title">爱的消亡史</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1mD2UBvE8t" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/solo/image24.webp" alt="用情">
+          <div class="card-body">
+            <div class="card-title">用情</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1nJ4m1K7xB" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/solo/image25.webp" alt="年">
+          <div class="card-body">
+            <div class="card-title">年</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1QkxSemExs" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/solo/image26.webp" alt="污渍">
+          <div class="card-body">
+            <div class="card-title">污渍</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1am4y1u7BG" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/solo/image27.webp" alt="让我留在你身边">
+          <div class="card-body">
+            <div class="card-title">让我留在你身边</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV12c411B7hw" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/solo/image28.webp" alt="爱在终局之前">
+          <div class="card-body">
+            <div class="card-title">爱在终局之前</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1PY6SBLEhu" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/solo/image29.webp" alt="月之浮想">
+          <div class="card-body">
+            <div class="card-title">月之浮想</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1K6eqznEqP" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/solo/image30.webp" alt="kiss you goodbye">
+          <div class="card-body">
+            <div class="card-title">kiss you goodbye</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1oL411U7Qm" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/solo/image31.webp" alt="逆光">
+          <div class="card-body">
+            <div class="card-title">逆光</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV12Tb9zEE5u" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/solo/image32.webp" alt="Brave Heart">
+          <div class="card-body">
+            <div class="card-title">Brave Heart</div>
+          </div>
+        </a>
+        <a href="https://www.bilibili.com/video/BV1TNCZB7E1m?bvid=BV1TNCZB7E1m&" class="card" target="_blank"
+          rel="noopener">
+          <img class="card-img" src="media/图片/solo/image33.webp" alt="Solo舞台合集">
+          <div class="card-body">
+            <div class="card-title">Solo舞台合集</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="stage-category">
+      <h3>群光撷影</h3>
+      <div class="card-grid">
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1XAVK6rEfZ" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/highlight/image33.webp" alt="受到偏爱的蝴蝶 · 放心去飞">
+          <div class="card-body">
+            <div class="card-title">受到偏爱的蝴蝶 · 放心去飞</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1gx4y1n7Pf" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/highlight/image34.webp" alt="想和你一起分享这个春天">
+          <div class="card-body">
+            <div class="card-title">想和你一起分享这个春天</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV17L4y1w7W5" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/highlight/image35.webp" alt="见面能让爱升温">
+          <div class="card-body">
+            <div class="card-title">见面能让爱升温</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1nh4y1J7UC" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/highlight/image36.webp" alt="遇见了你 · 我便无所不能">
+          <div class="card-body">
+            <div class="card-title">遇见了你 · 我便无所不能</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1B5tYeSEAx" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/highlight/image37.webp" alt="一直陪着你呢 · 别担心">
+          <div class="card-body">
+            <div class="card-title">一直陪着你呢 · 别担心</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7620981821468557221" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/highlight/image38.webp" alt="我为每次相见都施加了魔法">
+          <div class="card-body">
+            <div class="card-title">我为每次相见都施加了魔法</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1RQ9xYrE3t" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/highlight/ggl.webp" alt="有限的时间里 · 有着无限的爱">
+          <div class="card-body">
+            <div class="card-title">有限的时间里 · 有着无限的爱</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV14Eh9zZEBG" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/highlight/image39.webp" alt="可爱 · 是可以被好好的爱着">
+          <div class="card-body">
+            <div class="card-title">可爱 · 是可以被好好的爱着</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="stage-category">
+      <h3>台边碎录</h3>
+      <div class="card-grid">
+        <a href="javascript:void(0)" data-type="douyin" data-id="7556464156410203451" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/shorts/image39.webp" alt="一起留下美好的回忆吧">
+          <div class="card-body">
+            <div class="card-title">一起留下美好的回忆吧</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7647530392290872639" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/shorts/image40.webp" alt="会一直唱歌给你们听">
+          <div class="card-body">
+            <div class="card-title">会一直唱歌给你们听</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7421397992525024521" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/shorts/image41.webp" alt="你要先做自己的春天">
+          <div class="card-body">
+            <div class="card-title">你要先做自己的春天</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7437057473338494217" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/shorts/image43.webp" alt="我们正看着同一片落日">
+          <div class="card-body">
+            <div class="card-title">我们正看着同一片落日</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7543555399715982651" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/shorts/image44.webp" alt="莫奈有花 · 而我应该有真知棒">
+          <div class="card-body">
+            <div class="card-title">莫奈应该有花 · 而我应该有真知棒</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7406972139863149834" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/shorts/image45.webp" alt="爱我的同时也要记得爱好自己">
+          <div class="card-body">
+            <div class="card-title">爱我的同时也要记得爱好自己</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7555114768886533402" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/shorts/image46.webp" alt="爱人·爱己·爱世间万物">
+          <div class="card-body">
+            <div class="card-title">爱人 · 爱己 · 爱世间万物</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7532072565704101147" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/shorts/image47.webp" alt="可越高山 · 也悦己心">
+          <div class="card-body">
+            <div class="card-title">可越高山 · 也悦己心</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7576516483196325300" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/shorts/image48.webp" alt="那就在春天见一面吧">
+          <div class="card-body">
+            <div class="card-title">那就在春天见一面吧</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7543223881067154740" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/shorts/image49.webp" alt="你开心的话 · 我也会开心">
+          <div class="card-body">
+            <div class="card-title">你开心的话 · 我也会开心</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7481300217636097332" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/shorts/image50.webp" alt="音乐不受限 · 你也一样">
+          <div class="card-body">
+            <div class="card-title">音乐不受限 · 你也一样</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7644530976211464889" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/shorts/image51.webp" alt="互相思念的人终会相见">
+          <div class="card-body">
+            <div class="card-title">互相思念的人终会相见</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-in" id="drama">
+    <div class="section-header">
+      <h2>戏剧演绎</h2>
+      <p>不止于歌，更在于戏</p>
+    </div>
+    <div class="drama-grid">
+      <div class="drama-card">
+        <span class="drama-badge theater">国家话剧院</span>
+        <h4>《铁流东进》</h4>
+        <p class="drama-role">角色：小柴火</p>
+        <p class="drama-achievement">提名第六届华语戏剧盛典最佳新人奖</p>
+        <div class="drama-img"><img class="card-img" src="media/图片/drama/image52.webp" alt="铁流东进"></div>
+        <div class="drama-links">
+          <a href="javascript:void(0)" data-type="bilibili" data-id="BV1noaKznE9x" rel="noopener">官摄 Cut</a>
+          <a href="https://www.bilibili.com/video/BV1dZ4y127GR/?bvid=BV1dZ4y127GR&" target="_blank"
+            rel="noopener">物料系列</a>
+        </div>
+      </div>
+      <div class="drama-card">
+        <span class="drama-badge musical">音乐剧公演</span>
+        <h4>《家》</h4>
+        <p class="drama-role">角色：高觉慧</p>
+        <p class="drama-achievement">入选第十八届中国戏剧节参演剧目</p>
+        <div class="drama-img"><img class="card-img" src="media/图片/drama/image53.webp" alt="家"></div>
+        <div class="drama-links">
+          <a href="javascript:void(0)" data-type="bilibili" data-id="BV1q4421X7u8" rel="noopener">高光片段</a>
+        </div>
+      </div>
+      <div class="drama-card">
+        <span class="drama-badge graduation">中戏毕业大戏</span>
+        <h4>《禾下乘凉梦》</h4>
+        <p class="drama-role">角色：冼十八 / 叙述者</p>
+        <p class="drama-achievement">中央戏剧学院原创音乐剧毕业大戏</p>
+        <div class="drama-img"><img class="card-img" src="media/图片/drama/image54.webp" alt="禾下乘凉梦"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-in" id="variety">
+    <div class="section-header">
+      <h2>综艺闪光录</h2>
+      <p>镜头之外的真实与可爱</p>
+    </div>
+
+    <!-- 分区一：个人外务 -->
+    <div class="variety-subsection">
+      <div class="subsection-header">
+        <h3>个人外务</h3>
+      </div>
+      <div class="pa-layout">
+        <div class="pa-left polaroid">
+          <a href="http://www.mgtv.com/h/887305.html" target="_blank" rel="noopener"
+            class="pa-card polaroid pa-card-left">
+            <img src="media/图片/zy/1.webp" alt="密室大逃脱">
+            <div class="pa-card-label">密室大逃脱</div>
+          </a>
+        </div>
+        <div class="pa-right polaroid">
+          <a href="http://www.iqiyi.com/v_26ngf88lb5k.html" target="_blank" rel="noopener"
+            class="pa-card polaroid pa-card-right">
+            <img src="media/图片/zy/2.webp" alt="奔跑吧">
+            <div class="pa-card-label">奔跑吧</div>
+          </a>
+        </div>
+      </div>
+      <div class="variety-subsection">
+        <div class="subsection-header">
+          <h3>综艺碎片</h3>
+        </div>
+        <div class="card-grid">
+          <a href="javascript:void(0)" data-type="bilibili" data-id="BV1LQdNBEECx" rel="noopener" class="card">
+            <img class="card-img" src="media/图片/variety/image55.webp" alt="追随着月光的人 · 又何尝没有成为月光的能力">
+            <div class="card-body">
+              <div class="card-title">追随着月光的人 · 又何尝没有成为月光的能力</div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" data-type="bilibili" data-id="BV1gsZXYSE49" rel="noopener" class="card">
+            <img class="card-img" src="media/图片/variety/image56.webp" alt="谢谢你们从始至终都在我身边 · 给我能量给我支撑">
+            <div class="card-body">
+              <div class="card-title">谢谢你们从始至终都在我身边·给我能量给我支撑</div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" data-type="douyin" data-id="7458637240399416595" rel="noopener" class="card">
+            <img class="card-img" src="media/图片/variety_douyin/image57.webp" alt="爱所途经和留存的地方都是你">
+            <div class="card-body">
+              <div class="card-title">爱所途经和留存的地方都是你</div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" data-type="douyin" data-id="7658694626527002234" rel="noopener" class="card">
+            <img class="card-img" src="media/图片/variety_douyin/image58.webp" alt="从现在开始 · 我们的故事取决于你">
+            <div class="card-body">
+              <div class="card-title">从现在开始 · 我们的故事取决于你</div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" data-type="douyin" data-id="7421025708090199337" rel="noopener" class="card">
+            <img class="card-img" src="media/图片/variety_douyin/image59.webp" alt="你们的陪伴 · 胜过千千万万">
+            <div class="card-body">
+              <div class="card-title">你们的陪伴 · 胜过千千万万</div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" data-type="douyin" data-id="7647949522940966026" rel="noopener" class="card">
+            <img class="card-img" src="media/图片/variety_douyin/image60.webp" alt="身后是光 · 眼前是光照亮的方向">
+            <div class="card-body">
+              <div class="card-title">身后是光 · 眼前是光照亮的方向</div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" data-type="douyin" data-id="7390782210644774153" rel="noopener" class="card">
+            <img class="card-img" src="media/图片/variety_douyin/image61.webp" alt="你们的爱永远是我收到最好的礼物">
+            <div class="card-body">
+              <div class="card-title">你们的爱永远是我收到最好的礼物</div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" data-type="douyin" data-id="7660086000764472591" class="card" rel="noopener">
+            <img class="card-img" src="media/图片/variety_douyin/image62.webp" alt="答应我 · 要幸福地生活哦">
+            <div class="card-body">
+              <div class="card-title">答应我 · 要幸福地生活哦</div>
+            </div>
+          </a>
+        </div>
+      </div>
+  </section>
+
+  <section class="section fade-in" id="fans">
+    <div class="section-header">
+      <h2>真知小筑</h2>
+    </div>
+    <p class="fan-motto">拾一路成长碎片，藏满心温柔偏爱</p>
+    <div class="fan-category">
+      <h3>成长纪实向</h3>
+      <div class="card-grid">
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV115411p7TT" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_growth/image62.webp" alt="张真源成长向记录">
+          <div class="card-body">
+            <div class="card-title">张真源成长向记录</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1US8nzeEJ4" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_growth/image63.webp" alt="乌托邦世界视角">
+          <div class="card-body">
+            <div class="card-title">乌托邦世界视角</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1b6YmeoEWc" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_growth/image64.webp" alt="出道近五年心碎前进">
+          <div class="card-body">
+            <div class="card-title">出道近五年心碎前进</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1an2VBgEYN" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_growth/image65.webp" alt="献给你的生长痛">
+          <div class="card-body">
+            <div class="card-title">献给你的生长痛</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="fan-category">
+      <h3>人格魅力向</h3>
+      <div class="card-grid">
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1VkhQzeEDW" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image65.webp" alt="要爱一个本身就很好的人">
+          <div class="card-body">
+            <div class="card-title">要爱一个本身就很好的人</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7567783423423696169" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image66.webp" alt="已经好的无法无天了">
+          <div class="card-body">
+            <div class="card-title">已经好的无法无天了</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7605512385020972338" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image67.webp" alt="真源永远的小爱神">
+          <div class="card-body">
+            <div class="card-title">真源永远的小爱神</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7537316827141508403" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image68.webp" alt="张真源真的是温柔本身">
+          <div class="card-body">
+            <div class="card-title">张真源真的是温柔本身</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7169360113801710851" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image69.webp" alt="付出从来不会落空">
+          <div class="card-body">
+            <div class="card-title">付出从来不会落空</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="6957662290569088296" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image70.webp" alt="骨子里的温柔和教养">
+          <div class="card-body">
+            <div class="card-title">骨子里的温柔和教养</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7085628748422204684" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image71.webp" alt="温柔真挚">
+          <div class="card-body">
+            <div class="card-title">一直都是温柔真挚</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7516383150633766183" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image78.webp" alt="人民文娱专访">
+          <div class="card-body">
+            <div class="card-title">人民文娱专访</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="fan-category">
+      <h3>治愈向</h3>
+      <div class="card-grid">
+        <a href="javascript:void(0)" data-type="douyin" data-id="7583998361175608603" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image72.webp" alt="看你笑也是我幸福的一种">
+          <div class="card-body">
+            <div class="card-title">看你笑也是我幸福的一种</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7482700854596898063" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image73.webp" alt="谁懂这个笑的含金量">
+          <div class="card-body">
+            <div class="card-title">谁懂这个笑的含金量</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7599277733222354228" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image74.webp" alt="温脸萌的魅力">
+          <div class="card-body">
+            <div class="card-title">温脸萌的魅力</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7647097311411289811" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image75.webp" alt="笑眼弯弯的宝宝">
+          <div class="card-body">
+            <div class="card-title">笑眼弯弯的宝宝</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7486161180252228922" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image76.webp" alt="我要的爱只在你身上存在">
+          <div class="card-body">
+            <div class="card-title">我要的爱只在你身上存在</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="bilibili" data-id="BV1CWd3YHEeD" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image77.webp" alt="初识篇-追逐光拥抱光成为光">
+          <div class="card-body">
+            <div class="card-title">初识篇-追逐光拥抱光成为光</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7332195824555887911" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image79.webp" alt="谁来懂低头笑的含金量">
+          <div class="card-body">
+            <div class="card-title">谁来懂低头笑的含金量</div>
+          </div>
+        </a>
+        <a href="javascript:void(0)" data-type="douyin" data-id="7277842640794553612" class="card" rel="noopener">
+          <img class="card-img" src="media/图片/fan_charm/image80.webp" alt="这个笑我人没了">
+          <div class="card-body">
+            <div class="card-title">这个笑我人没了</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section message-wall-section fade-in" id="messageWall">
+    <div class="section-header">
+      <h2>真知留言</h2>
+      <p class="fan-motto">每一句留言，都是一颗为你亮起的星 ✦</p>
+    </div>
+    <div class="message-form-container">
+      <form id="messageForm">
+        <input type="text" id="nickInput" class="message-input" placeholder="你的昵称" maxlength="15">
+        <textarea id="msgInput" class="message-input message-textarea" placeholder="写下你想对他说的话..."
+          maxlength="40"></textarea>
+        <button type="submit" class="message-submit-btn">提交留言</button>
+      </form>
+      <div id="formMsg" class="form-msg"></div>
+    </div>
+    <div class="message-wall-grid" id="messageWallGrid">
+      <div class="message-loading">加载中...</div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-about">
+        <p>素材均取自网络，仅作粉丝交流，无商业用途。</p>
+        <p>若涉及版权问题，欢迎联系删改。</p>
+
+        <div class="footer-brand">
+          <p>一川鸢尾 ♥ 予你真光</p>
+        </div>
+      </div>
+  </footer>
+
+
+  <!-- Video Modal -->
+  <div id="videoModal" style="display:none;">
+    <div class="modal-mask"></div>
+    <div class="video-modal-inner">
+      <button class="modal-close" aria-label="关闭">&times;</button>
+      <iframe id="videoIframe" src="" frameborder="0" allowfullscreen referrerpolicy="unsafe-url"
+        allow="autoplay; encrypted-media"></iframe>
+    </div>
+  </div>
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <script src="js/bgm.js"></script>
+  <script src="js/petals.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/help-modal.js"></script>
+</body>
+<script src="js/cursor-petals.js"></script>
+
+</html>
+
+
+
+
+

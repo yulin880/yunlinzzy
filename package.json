@@ -1,0 +1,15 @@
+﻿{
+  "name": "zzy-site",
+  "version": "1.0.0",
+  "description": "ZZY website deployed on Netlify",
+  "main": "netlify/functions/api.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.22.5",
+    "cors": "^2.8.6"
+  }
+}
