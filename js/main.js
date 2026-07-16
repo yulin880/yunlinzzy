@@ -579,7 +579,7 @@ document.addEventListener('DOMContentLoaded', function() {
     danmakuObserver.observe(messageWallGrid);
 
     function loadMessages() {
-      fetch('api/message')
+      fetch('/api/message')
         .then(function(r) { return r.json(); })
         .then(function(res) {
           var msgs = res.data || [];
@@ -611,7 +611,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var msg = document.getElementById('msgInput').value.trim();
       formMsg.textContent = '';
 
-      fetch('api/addMsg', {
+      fetch('/api/addMsg', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nick_name: nick, msg_text: msg })
