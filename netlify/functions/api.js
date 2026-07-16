@@ -11,6 +11,9 @@ const pool = mysql.createPool({
 
 exports.handler = async (event, context) => {
   const path = event.path.replace(/^\//, '').replace(/^api\//, '');
+  console.log('DEBUG: path=' + path + ', method=' + event.httpMethod);
+  console.log('DEBUG: MYSQL_HOST=' + process.env.MYSQL_HOST);
+  console.log('DEBUG: MYSQL_PASSWORD=' + (process.env.MYSQL_PASSWORD ? 'SET' : 'NOT SET'));
 
   const headers = {
     'Access-Control-Allow-Origin': '*',
@@ -71,9 +74,7 @@ exports.handler = async (event, context) => {
     return { statusCode: 404, headers, body: JSON.stringify({ code: 404, msg: 'API 路由未找到' }) };
 
   } catch (err) {
-    console.error('Serverless Function Error:', err);
-    return { statusCode: 500, headers, body: JSON.stringify({ code: 500, msg: '服务器内部错误' }) };
-  } finally {
-    await pool.end().catch(() => {});
+    console.error('ERROR:', err.message);
+    return { statusCode: 500, headers, body: JSON.stringify({ code: 500, msg: '服务器内部错误: ' + err.message }) };
   }
 };
