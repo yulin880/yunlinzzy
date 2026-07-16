@@ -2,7 +2,7 @@
 
 // 数据库连接池
 const pool = mysql.createPool({
-  host: process.env.MYSQL_HOST || 'mysql6.sqlpub.com',
+  host: process.env.MYSQL_HOST || 'mysql6.sqlpub.com'
   port: parseInt(process.env.MYSQL_PORT || '3311'),
   user: process.env.MYSQL_USER || 'zzyyulin',
   password: process.env.MYSQL_PASSWORD || '6DOGfz4fStKdMBFH',
